@@ -4,7 +4,7 @@ const connectDb = require('./db/mongodb')
 const { appConfig, db }=require('./config')
 
 
-const port = process.env.APP_PORT
+const port = process.env.PORT || appConfig.port;
 
 connectDb(db)
-app.listen(appConfig.port, () => console.log(`listen on ${appConfig.port}`));
+app.listen(port, () => console.log(`Server is running on port ${port}`));
