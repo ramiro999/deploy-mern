@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000'; // Cambia esto a la URL de tu backend
+const API_URL = 'https://deploy-mern-six.vercel.app/'; // Cambia esto a la URL de tu backend
 
 export const addCancha = async (cancha) => {
   return await axios.post(`${API_URL}/cancha`, cancha);
